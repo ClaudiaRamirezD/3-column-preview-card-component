@@ -230,8 +230,9 @@ a {
   }
 
   .btn{
-    font-size: 1rem;
+    font-size: .9rem;
     padding: .3em;
+    width: 8rem;
   }
 
    
