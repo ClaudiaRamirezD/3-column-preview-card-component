@@ -1,0 +1,228 @@
+/* 
+## Colors
+
+### Primary 
+
+Bright orange: hsl(31, 77%, 52%) 
+Dark cyan: hsl(184, 100%, 22%) 
+Very dark cyan: hsl(179, 100%, 13%) 
+
+### Neutral 
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75) 
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%) */
+
+:root {
+    --primary-orange: hsl(31, 77%, 52%);
+    --primary-dark: hsl(184, 100%, 22%);
+    --primary-very-dark: hsl(179, 100%, 13%);
+
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+
+    overflow-x: hidden;
+    background-color: var(--transparent-white);
+    font-family: 'Lexend Deca',
+        sans-serif;
+    font-family: 'Big Shoulders Display',
+        cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 90%;
+    margin: 6em auto;
+}
+
+.cards {
+    display: flex;
+    /* flex-flow: column wrap; */
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.card {
+
+    
+    
+    color: var(--light-gray);
+    overflow: hidden;
+    align-self: normal;
+
+   
+}
+
+.card-col-body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1 1 25em;
+    padding: 2.3em 2.5em;
+    align-self: normal;
+    align-items: flex-start;
+}
+
+.title {
+    text-transform: uppercase;
+    padding-top: 1em;
+    font-size: 2em;
+
+}
+
+.text {
+    font-family: 'Lexend Deca',
+        sans-serif;
+    color: var(--transparent-white);
+    font-size: .8rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    word-spacing: 2px;
+    line-height: 1.7em;
+    padding-top: 1.6em;
+    padding-bottom: 1.8em;
+    margin-bottom: 10px;
+
+}
+
+.sedan {
+    border-radius: .5em .5em 0 0;
+    background: var(--primary-orange);
+}
+
+
+.suv {
+    background: var(--primary-dark);
+
+}
+
+.luxury {
+    border-radius: 0 0 .5em .5em;
+    background: var(--primary-very-dark);
+}
+
+
+
+
+.sedan-button {
+    color: var(--primary-orange);
+    border: var(--primary-orange);
+
+}
+
+.suv-button {
+    color: var(--primary-dark);
+    border: var(--primary-dark);
+
+}
+
+.luxury-button {
+    color: var(--primary-very-dark);
+    border: var(--primary-very-dark);
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--transparent-white);
+    text-align: center;
+    padding: 1em 1.5em;
+    border-radius: 50px;
+    margin-top: auto;
+    font-size: .75rem;
+    width: 70%;
+}
+
+@media(min-width:426px) {
+
+    .cards {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .sedan {
+        border-radius: .5em 0 0 .5em;
+
+    }
+
+    .luxury {
+        border-radius: 0 .5em .5em 0;
+
+    }
+
+    .container {
+        max-width: 70%;
+        margin: 2em 5em;
+    }
+
+    .card-col-body {
+        padding: 2em 1.5em;
+        max-height: 30em;
+        display:flex;
+    }
+
+    img{
+        width: 2.5em;
+    }
+
+    .title {
+        padding-top: 0.7em;
+        font-size: 1.4em;
+    }
+
+    .text{
+        font-size: .7rem;
+    }
+
+    
+
+
+}
+
+@media(min-width:1024px){
+
+    img {
+        width: 3em;
+    }
+  .card-col-body {
+    max-width: 15em;
+    height: 25em;
+      
+  }
+  .text {
+      font-size: .8rem;
+      padding-top: 1.5em;
+  }
+
+  .title {
+      padding-top: 1.5em;
+      font-size: 2em;
+  }
+
+  .btn{
+    font-size: 1rem;
+    padding: .3em;
+  }
+
+   
+
+
+}
